@@ -1,0 +1,29 @@
+<h1>RGB</h1>
+<form>
+    <input type="number" name="r" [(ngModel)]="r" id="r" (keyup)="keyupColor()" (change)="changeColor()">
+    <input type="number" name="g" [(ngModel)]="g" id="g" (keyup)="keyupColor()" (change)="changeColor()">
+    <input type="number" name="b" [(ngModel)]="b" id="b" (keyup)="keyupColor()" (change)="changeColor()">
+</form>
+<br>
+<div id="color-block">
+    <span>rgb({{r}}, {{g}}, {{b}})</span>
+</div>
+<style>
+    #color-block {
+        width: 300px;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000;
+        border-color: black;
+    }
+
+    #color-block > span {
+        background-color: white;
+    }
+
+    input {
+        width: 30px;
+    }
+</style>
